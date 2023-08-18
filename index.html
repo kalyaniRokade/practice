@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png"> 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@400;500;700&family=Fraunces:wght@700&family=Inter:wght@400;700;800&family=Montserrat:wght@500;700&family=Outfit:wght@300;400;600&family=Overpass:wght@400;700&family=Plus+Jakarta+Sans:wght@500;800&family=Poppins:ital,wght@0,700;1,400;1,800&family=Roboto:wght@400;700&family=Rubik:wght@300;400;500&family=Space+Mono:wght@700&display=swap" rel="stylesheet">
+  
+  <title>Frontend Mentor | NFT preview card component</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style> 
+    
+/* ### Primary
+
+- Soft blue: hsl(215, 51%, 70%)
+- Cyan: hsl(178, 100%, 50%)
+
+### Neutral
+
+- Very dark blue (main BG): hsl(217, 54%, 11%)
+- Very dark blue (card BG): hsl(216, 50%, 16%)
+- Very dark blue (line): hsl(215, 32%, 27%) 
+- White: hsl(0, 0%, 100%) */
+    body{ 
+      display: flex; 
+      justify-content: center; 
+      align-items: center; 
+      background-color: hsl(217, 54%, 11%) ; 
+      font-family: outfit; 
+      height:100vh;
+    }  
+    a{ 
+        text-decoration: none; 
+        color:white;  
+        cursor:pointer;
+       
+    } 
+    a:hover{ 
+      color:hsl(178, 100%, 50%);
+    }  
+   
+    .image{ 
+        width:280px; 
+        height:280px; 
+        background-image: url("image-equilibrium.jpg"); 
+        background-repeat: no-repeat; 
+        background-size: cover; 
+        border-radius: 10px;
+    } 
+    .image:hover{
+      background-image: url("icon-view.svg");  
+      background-position: center; 
+      background-color: hsl(178, 100%, 50%) ;
+      background-size:80px; 
+      
+    }
+    .upper a{ 
+      font-weight: bold;
+    }
+    .main{ 
+     
+      width:280px;   
+      padding:20px;
+      display:flex;
+      flex-direction: column;  
+      background-color: hsl(216, 50%, 16%);
+      justify-content: center; 
+      
+    }    
+ 
+    .info{ 
+      display: flex; 
+      flex-direction: column; 
+      margin-top:20px;
+    } 
+
+    .lower{ 
+      display: flex; 
+      flex-direction: row; 
+      justify-content: space-between;
+    } 
+    .left,.right{ 
+      display: flex; 
+      flex-direction: row; 
+      align-items: center;
+    } 
+    .owner{  
+      
+      display: grid;  
+      grid-template-columns: 50px 1fr; 
+      align-items: center;
+    } 
+    p{ 
+      color:lightslategray;
+    } 
+    hr{ 
+      color: hsl(216, 14%, 73%) ; 
+      width:280px;
+    } 
+
+    
+  </style>
+</head>
+<body>
+
+  <!-- Equilibrium #3429
+
+  Our Equilibrium collection promotes balance and calm.
+
+  0.041 ETH
+  3 days left
+  
+  Creation of Jules Wyvern -->
+  <div class="main"> 
+           
+            <a href="#" class="image">
+              <!-- <img style="height:280px;width:280px;border-radius: 10px; cursor:pointer;"src="image-equilibrium.jpg">  -->
+            </a>
+         
+           
+         
+ 
+    <div class="info">
+       <div class="upper">
+         <a href="#">Equilibrium #3429 </a>
+        <p>Our Equilibrium collection promotes balance and calm </p>
+       </div> 
+       <div class="lower"> 
+        <div class="left">
+          <img style="height:15px;"src="icon-ethereum.svg"> 
+          <p style="color: hsl(178, 100%, 50%);font-size:12px;">&nbsp;&nbsp;0.041ETH</p>
+        </div>
+        <div class="right">
+          <img style="height:15px;" src="icon-clock.svg"> 
+          <p style="font-size:12px;">&nbsp;&nbsp;3 days left</p>
+        </div>
+       </div>
+    </div>  
+    <hr >
+    <div class="owner">
+      <div class="image1"> 
+        <img style="height:32px;border-style: solid;border-radius: 50%;border-color:white;border-width: 1px;"src="image-avatar.png"> 
+        
+      </div> 
+      <div class="name"> 
+        <p>Creation of <a href="#">Jules Wyvern</a></p>
+      </div>
+    </div>
+  </div>
+  
+
+</body>
+</html>
